@@ -4,28 +4,6 @@ import TodoItem from './TodoItem';
 import data from '../data/todos.json';
 import '../style/TodoList.css';
 
-
-function TodoList(props) {
-  const [todos, setTodos] = useState([]);
-//  const getData = () => {
-//     fetch('../data/todos.json')
-//       .then(response => {
-//         console.log(response);
-//         return response.json();
-//       })
-//       .then(todos => {
-//         console.log(todos);
-//         setTodos(todos)
-//       })
-//       .catch(error => console.error(error));
-//       console.log(todos);
-//   }
- 
-//   useEffect(() => {
-//     // Fetch the initial todos from the data.json file
-//     getData();
-//    }, []);
-
   function handleAddTodo(newTodo) {
     setTodos([...todos, newTodo]);
   }
