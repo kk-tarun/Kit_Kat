@@ -14,7 +14,8 @@ function TodoItem({ todo, onDeleteTodo }) {
       <td className="type">{type}</td>
       <td className="status">{status}</td>
       <td className="actions">
-        <button onClick={handleDelete}>Delete</button>
+        {/* <button onClick={handleDelete}>Delete</button> */}
+        <i className="fa fa-solid fa-check-double" onClick={handleDelete}></i>
       </td>
     </tr>
   );

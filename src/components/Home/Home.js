@@ -6,17 +6,15 @@ export default function Home() {
   return (
     <div className={styles.containerr}>
       <div>
-        <h1>
-          Todo List
-        </h1>
+        <h1>TimeTrackr</h1>
         <div className={styles.Home}>
           <Link to="/login" className={styles.loglink}>
-            <button class="btn btn-primary btn-lg btn-block"> LogIn </button>
+            <button className="btn btn-primary btn-lg btn-block"> LogIn </button>
           </Link>{" "}
           <br />
           <br />{" "}
           <Link to="/signup" className={styles.signlink}>
-            <button class="btn btn-outline-primary btn-lg btn-block">
+            <button className="btn btn-outline-primary btn-lg btn-block">
               {" "}
               SignUp{" "}
             </button>

@@ -5,7 +5,7 @@ import "../style/TodoList.css";
 import AddTodoForm from "./AddTodoForm";
 
 function TodoList() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([{"id":1,"name":"Marcie","date":"17/11/2022","type":"solo","status":"Completed"}]);
 
   function handleAddTodo(newTodo) {
     setTodos([...todos, newTodo]);
@@ -21,11 +21,11 @@ function TodoList() {
       <table className="tableBody">
         <thead>
           <tr className="header">
-            <th className="name-column">Name</th>
-            <th className="des-column">Description</th>
-            <th className="type-column">Type</th>
-            <th className="status-column">Status</th>
-            <th className="status-column">Activity</th>
+            <th className="name-column"><i className="fa fa-regular fa-clipboard"></i>  Name</th>
+            <th className="des-column"><i className="fa fa-solid fa-calendar"></i>  Date</th>
+            <th className="type-column"><i className="fa fa-regular fa-circle-play"></i>  Type</th>
+            <th className="status-column"><i className="fa fa-regular fa-rectangle-list"></i>  Status</th>
+            <th className="status-column"><i className="fa fa-regular fa-square-check"></i>  Activity</th>
           </tr>
         </thead>
         <tbody className="body">

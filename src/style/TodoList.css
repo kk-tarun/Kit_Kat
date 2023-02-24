@@ -3,6 +3,17 @@ table{
   text-align: left;
   border-collapse: collapse;
 }
+th{
+  border-bottom: 2px solid #242424;
+}
+td, th {
+  border-right: 2px solid #242424; /* add a border to the right side of each cell */
+  padding: 10px; /* add some padding to the cells */
+}
+
+td:last-child, th:last-child {
+  border-right: none; /* remove the border from the last column of cells */
+}
 
 .todo-item {
   height: 50px;
@@ -28,4 +39,17 @@ table{
 
 tr:hover {
   background-color: #252525;
+  transition: 0.3s;
 }
+
+.fa:hover {
+  color: rgb(56, 188, 56);
+  transition: 0.3s;
+}
+
+.header .fa:hover {
+color: rgb(231, 205, 11);
+transition: 0.3s;
+}
+
+
