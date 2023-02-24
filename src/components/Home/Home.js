@@ -11,12 +11,12 @@ export default function Home() {
         </h1>
         <div className={styles.Home}>
           <Link to="/login" className={styles.loglink}>
-            <button class="btn btn-warning btn-lg btn-block"> LogIn </button>
+            <button class="btn btn-primary btn-lg btn-block"> LogIn </button>
           </Link>{" "}
           <br />
           <br />{" "}
           <Link to="/signup" className={styles.signlink}>
-            <button class="btn btn-outline-dark btn-lg btn-block">
+            <button class="btn btn-outline-primary btn-lg btn-block">
               {" "}
               SignUp{" "}
             </button>
