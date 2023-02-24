@@ -5,7 +5,7 @@ import "../style/TodoList.css";
 import AddTodoForm from "./AddTodoForm";
 
 function TodoList() {
-  const [todos, setTodos] = useState([{"id":1,"name":"Marcie","date":"17/12/2021","type":"solo","status":"Completed"}]);
+  const [todos, setTodos] = useState([]);
 
   function handleAddTodo(newTodo) {
     setTodos([...todos, newTodo]);
