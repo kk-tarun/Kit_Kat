@@ -1,8 +1,4 @@
 .container {
-  height: 100%;
-  width: 100%;
-  min-height: 100vh;
-  background: #85586F;
   display: flex;
   justify-content: center;
   align-items: center;
