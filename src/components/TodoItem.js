@@ -1,7 +1,7 @@
 import React from "react";
 import "../style/TodoList.css";
 function TodoItem({ todo, onDeleteTodo }) {
-  const { id, name, dates, type, status } = todo;
+  const { id, name, date, type, status } = todo;
 
   function handleDelete() {
     onDeleteTodo && onDeleteTodo(id);
@@ -10,7 +10,7 @@ function TodoItem({ todo, onDeleteTodo }) {
   return (
     <tr className="todo-item">
       <td className="name">{name}</td>
-      <td className="date">{dates}</td>
+      <td className="des">{date}</td>
       <td className="type">{type}</td>
       <td className="status">{status}</td>
       <td className="actions">

@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid"; 
 
 function AddTodoForm({ onAddTodo }) {
   const [newTodo, setNewTodo] = useState({
+    id: "",
     name: "",
-    // date: "",
-    date: "",
+    date: new Date().toISOString().substring(0, 10),
     type: "",
     status: "",
   });
+  const dateInputRef = useRef();
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -19,17 +21,24 @@ function AddTodoForm({ onAddTodo }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    onAddTodo && onAddTodo(newTodo);
+    const todoWithId = {
+      ...newTodo,
+      id: uuidv4(),
+    };
+    onAddTodo && onAddTodo(todoWithId);
     setNewTodo({
+      id: "",
       name: "",
-    //   date: "",
       date: "",
       type: "",
       status: "",
     });
-    console.log(newTodo);
-    
+    dateInputRef.current.value = ""; 
   }
+
+  useEffect(() => {
+    dateInputRef.current.value = newTodo.date;
+  }, []);
 
   return (
     <form onSubmit={handleSubmit}>
@@ -42,11 +51,12 @@ function AddTodoForm({ onAddTodo }) {
         onChange={handleChange}
         required
       />
-      <label htmlFor="date">date:</label>
+      <label htmlFor="date">Date:</label>
       <input
-      type="date"
+        type="date"
         id="date"
         name="date"
+        ref={dateInputRef}
         value={newTodo.date}
         onChange={handleChange}
         required
