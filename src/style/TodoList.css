@@ -1,0 +1,49 @@
+.todo-item, .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .todo-item td {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .todo-item td.name {
+    width: 30%;
+  }
+  
+  .todo-item td.date {
+    width: 20%;
+  }
+  
+  .todo-item td.type {
+    width: 20%;
+  }
+  
+  .todo-item td.status {
+    width: 20%;
+  }
+  
+  /* .todo-item td.actions {
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+   */
+  /* .todo-item button {
+    padding: 4px 8px;
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  } */
+  
+  /* .todo-item button:hover {
+    background-color: #ff4d4d;
+  } */
+  
