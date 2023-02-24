@@ -1,0 +1,44 @@
+.containerr {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+
+}
+
+.loglink {
+  color: #fff;
+}
+.signlink {
+  color: #000;
+}
+
+.Home {
+  min-width: 480px;
+  height: fit-content;
+  width: fit-content;
+  padding: 35px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  justify-content: center;
+  color: #000;
+  margin-left: 33%;
+  margin-bottom: 8%;
+  font-weight: 800;
+  font-family: 'Dancing Script', cursive;
+}
+Link ::content {
+  text-decoration: none;
+}
