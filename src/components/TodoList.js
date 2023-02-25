@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import TodoItem from "./TodoItem";
-import data from "../data/todos.json";
 import "../style/TodoList.css";
 import AddTodoForm from "./AddTodoForm";
 
 function TodoList() {
-  const [todos, setTodos] = useState([{"id":1,"name":"Marcie","date":"17/11/2022","type":"solo","status":"Completed"}]);
+  const [todos, setTodos] = useState([]);
   const [selectedTodoId, setSelectedTodoId] = useState(null);
   function handleAddTodo(newTodo) {
     setTodos([...todos, newTodo]);
@@ -53,6 +52,26 @@ function TodoList() {
           ))}
         </tbody>
       </table>
+      {todos.length === 0 &&
+        <button
+          type="button"
+          className="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          style={{
+            margin: '40px auto',
+            width: '100%',
+            height: '500px',
+            border: '2px dashed #c0c0c0',
+            backgroundColor: 'transparent'
+          }}
+        >
+          <i class="fa-solid fa-file-pen" style={{ fontSize: '100px' }}></i>
+          <br />
+          <br />
+          <span style={{ marginLeft: '-25px' }}>Click to add Task</span>
+        </button>
+      }
     </div>
   );
 }

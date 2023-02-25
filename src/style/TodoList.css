@@ -7,12 +7,12 @@ th{
   border-bottom: 2px solid #242424;
 }
 td, th {
-  border-right: 2px solid #242424; /* add a border to the right side of each cell */
-  padding: 10px; /* add some padding to the cells */
+  border-right: 2px solid #242424;
+  padding: 10px; 
 }
 
 td:last-child, th:last-child {
-  border-right: none; /* remove the border from the last column of cells */
+  border-right: none;
 }
 
 .todo-item {
@@ -68,4 +68,22 @@ transition: 0.3s;
   background-color: rgb(65, 147, 65, 0.753);
 }
 
+.todo-list{
+  text-align: center;
+}
 
+
+input{
+  border-radius: 5px;
+  border-color: #c0c0c0 !important;
+  padding: 5px;
+  margin: 20px 20px;
+}
+
+i:hover{
+  color: yellow;
+}
+
+button{
+  text-align: center;
+}
