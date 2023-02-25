@@ -6,14 +6,26 @@ import AddTodoForm from "./AddTodoForm";
 
 function TodoList() {
   const [todos, setTodos] = useState([{"id":1,"name":"Marcie","date":"17/11/2022","type":"solo","status":"Completed"}]);
-
+  const [selectedTodoId, setSelectedTodoId] = useState(null);
   function handleAddTodo(newTodo) {
     setTodos([...todos, newTodo]);
   }
 
   function handleDeleteTodo(todoId) {
     setTodos(todos.filter((todo) => todo.id !== todoId));
+    setSelectedTodoId(null);
   }
+  function handleDoneTodo(todoId) {
+    // setSelectedTodoId(todoId);
+    if (todoId === selectedTodoId) {
+      // if the same todo is clicked again, deselect it
+      setSelectedTodoId(null);
+    } else {
+      // otherwise, select the new todo item
+      setSelectedTodoId(todoId);
+    }
+  }
+
 
   return (
     <div className="todo-list">
@@ -35,6 +47,8 @@ function TodoList() {
               key={index}
               todo={todo}
               onDeleteTodo={handleDeleteTodo}
+              onDone = {handleDoneTodo}
+              isSelected={todo.id === selectedTodoId}
             />
           ))}
         </tbody>

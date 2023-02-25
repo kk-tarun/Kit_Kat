@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.containerr}>
       <div>
-        <h1>TimeTrackr</h1>
+        {/* <h1>TimeTrackr</h1> */}
         <div className={styles.Home}>
           <Link to="/login" className={styles.loglink}>
             <button className="btn btn-primary btn-lg btn-block"> LogIn </button>

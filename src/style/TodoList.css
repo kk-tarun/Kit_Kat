@@ -52,4 +52,20 @@ color: rgb(231, 205, 11);
 transition: 0.3s;
 }
 
+.fa-xmark:hover{
+  color: rgb(212, 23, 23);
+  transition: 0.3s;
+}
+
+.actions{
+  display: flex;
+  justify-content: space-evenly;
+}
+.selected{
+  background-color: rgba(112, 193, 112, 0.753);
+}
+.selected:hover{
+  background-color: rgb(65, 147, 65, 0.753);
+}
+
 

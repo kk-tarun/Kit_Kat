@@ -223,14 +223,6 @@ function AddTodoForm({ onAddTodo }) {
                 <div className="row">
                   <div className="col">
                     <label htmlFor="type">Type:</label>
-                    {/* <input
-                      type="text"
-                      id="type"
-                      name="type"
-                      value={newTodo.type}
-                      onChange={handleChange}
-                      required
-                    /> */}
                     <select
                       id="type"
                       name="type"
@@ -238,7 +230,9 @@ function AddTodoForm({ onAddTodo }) {
                       onChange={handleChange}
                       required
                     >
-                      <option value="" hidden>--Select Type--</option>
+                      <option value="" hidden>
+                        --Select Type--
+                      </option>
                       <option value="Project">Project</option>
                       <option value="Interview">Interview</option>
                       <option value="Learning">Learning</option>
@@ -246,17 +240,34 @@ function AddTodoForm({ onAddTodo }) {
                   </div>
                   <div className="col">
                     <label htmlFor="status">Status:</label>
-                    <input
+                    {/* <input
                       type="text"
                       id="status"
                       name="status"
                       value={newTodo.status}
                       onChange={handleChange}
                       required
-                    />
+                    /> */}
+                    <select
+                      id="status"
+                      name="status"
+                      value={newTodo.status}
+                      onChange={handleChange}
+                      required
+                      // defaultValue="Not Started"
+                    >
+                      <option value=""hidden>--Select Progress--</option>
+                      <option value="In Progress">In Progress</option>
+                      <option value="Not Started" selected>Not Started</option>
+                      <option value="Completed">Completed</option>
+                    </select>
                   </div>
                 </div>
-                <button className="btn btn-primary" type="submit" data-bs-toggle="modal">
+                <button
+                  className="btn btn-primary"
+                  type="submit"
+                  data-bs-toggle="modal"
+                >
                   Add Todo
                 </button>
               </form>

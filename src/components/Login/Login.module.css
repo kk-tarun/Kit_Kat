@@ -7,12 +7,16 @@
   min-width: 480px;
   height: fit-content;
   width: fit-content;
-  background-color: #D0B8A8;
+  /* background-color: #403f3e; */
+  background-color: #495057;
   padding: 35px;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+.innerBox h1{
+  margin : 1rem auto 2rem auto;
 }
 .footer {
   display: flex;
@@ -28,7 +32,7 @@
 .footer button {
   outline: none;
   border: none;
-  background-color: #1C315E;
+  background-color: #1fd954;
   color: #fff;
   border-radius: 8px;
   font-weight: bold;
@@ -38,7 +42,7 @@
   cursor: pointer;
 }
 .footer button:hover {
-  background-color: #2f4d8d;
+  background-color: #31b339;
 }
 .footer button:disabled {
   background-color: gray;
